@@ -1,61 +1,65 @@
 <template>
-    <footer class="footer">
+    <footer class="footer bg-gradient-default">
         <div class="container">
             <div class="row py-3">
                 <div class="col-md-4">
-                        <h3>How to Find Us</h3>
+                        <h3 class="text-white">Endereço</h3>
 
-                        <h5 class="mb-2">Headquarters</h5>
-                        <p class="m-0">9863 - 9867 MILL ROAD, CAMBRIDGE, MG09 99HT.</p>
-                        <p class="m-0">Telephon: +1 800 603 6035</p>
-                        <p class="mt-0 mb-2">E-mail: mail@demolink.org</p>
+                        <h5 class="mb-2 text-white">Brasil</h5>
+                        <p class="m-0 text-white">9863 - 9867 MILL ROAD, CAMBRIDGE, MG09 99HT.</p>
+                        <p class="m-0 text-white">Telephon: +1 800 603 6035</p>
+                        <p class="mt-0 mb-2 text-white">E-mail: mail@demolink.org</p>
                         
-                        <h5 class="mb-2">Headquarters</h5>
-                        <p class="m-0">9863 - 9867 MILL ROAD, CAMBRIDGE, MG09 99HT.</p>
-                        <p class="m-0">Telephon: +1 800 603 6035</p>
-                        <p class="m-0">E-mail: mail@demolink.org</p>
+                        <h5 class="mb-2 text-white">EUA</h5>
+                        <p class="m-0 text-white">9863 - 9867 MILL ROAD, CAMBRIDGE, MG09 99HT.</p>
+                        <p class="m-0 text-white">Telephon: +1 800 603 6035</p>
+                        <p class="m-0 text-white">E-mail: mail@demolink.org</p>
                 </div>
 
                 <div class="col-md-4">
-                        <h3>Navigation</h3>
+                        <h3 class="text-white">Navegação</h3>
                         <ul class="list-unstyled mt-3">
                                 <li class="py-1">
-                                    <div class="d-flex align-items-center">
-                                        <badge type="success" circle class="mr-3" icon="ni ni-settings-gear-65"></badge>
-                                        <h6 class="mb-0">Carefully crafted components</h6>
-                                    </div>
+                                    <a class="" href="#contato">
+                                        <h6 class="text-white">Serviços</h6>
+                                    </a>
                                 </li>
                                 <li class="py-2">
-                                    <div class="d-flex align-items-center">
-                                        <badge type="success" circle class="mr-3" icon="ni ni-html5"></badge>
-                                        <h6 class="mb-0">Amazing page examples</h6>
-                                    </div>
+                                    <a class="" href="#contato">
+                                        <h6 class="text-white">Quem somos</h6>
+                                    </a>
+                                </li>
+                                <li class="py-1">
+                                    <a class="" href="#contato">
+                                        <h6 class="text-white">Contato</h6>
+                                    </a>
                                 </li>
                         </ul>
                 </div>
                 <div class="col-md-4">
-                        <h3>Contact Us</h3>
+                        <h3 class="text-white">Contact Us</h3>
                         <div class="btn-wrapper">
                                     <base-button 
                                         tag="a"
                                         href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html"
                                         class="mb-3 mb-sm-0"
+                                        size="md"
                                         type="success"
-                                        icon="fa fa-code">
-                                        Components
+                                        icon="fa fa-whatsapp">
+                                        Atendimento
                                     </base-button>
                                 </div>
 
                 </div>
             </div>
 
-            <hr>
+            <hr class="bg-light">
 
             <div class="row align-items-center justify-content-md-between">
                 <div class="col-6">
-                    <div class="copyright">
+                    <div class="copyright text-light">
                         &copy; {{year}}
-                        <a href="https://www.creative-tim.com" target="_blank" rel="noopener">Creative Tim</a> & <a href="https://www.binarcode.com" target="_blank" rel="noopener">Binar Code</a>
+                        <a href="https://www.creative-tim.com" target="_blank" rel="noopener" class="text-gold">Creative Tim</a> & <a href="https://www.binarcode.com" target="_blank" rel="noopener" class="text-gold">Binar Code</a>
                     </div>
                 </div>
 

@@ -24,7 +24,7 @@
             </div>
         </section>
 
-        <section class="section section-shaped my-0 overflow-hidden">
+        <section id="servicos" class="section section-shaped my-0 overflow-hidden">
             <div class="shape shape-style-3 bg-gradient-default shape-skew">
                 <span></span>
                 <span></span>
@@ -193,10 +193,9 @@
             </div>
         </section> -->
 
-        <!-- <section class="section bg-secondary"> -->
-            <section class="section">
+        <section id="sobre" class="section">
             <div class="container">
-                <div class="row text-center justify-content-center">
+                <div class="row text-center justify-content-center mb-5">
                     <div class="col-lg-10">
                         <h2 class="display-3">Quem somos</h2>
                     </div>
@@ -205,23 +204,16 @@
                 <div class="row row-grid align-items-center">
                     <div class="col-md-6">
                         <div class="card bg-default shadow border-0">
-                            <img v-lazy="'img/theme/img-1-1200x1000.jpg'" class="card-img-top">
+                            <img v-lazy="require('@/assets/img/quemsomos.jpg')" class="card-img-top">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="pl-md-5">
-                            <!-- <h3>Quem somos</h3> -->
-
                             <p class="lead">Transforme suas finanças e conquiste o futuro que você merece com a [Nome da Empresa]. Juntos, vamos além!</p>
 
                             <p>Na [Nome da Empresa], acreditamos que a liberdade financeira é alcançável para todos – basta um planejamento estratégico e as orientações corretas. Com anos de experiência no mercado, oferecemos soluções personalizadas para cada fase da sua vida financeira, sempre priorizando a transparência e o compromisso com os seus objetivos.</p>
 
                             <p>Nossa missão é simplificar o mundo dos investimentos, capacitando você a tomar decisões informadas e seguras. Seja para construir patrimônio, planejar a aposentadoria ou conquistar um sonho específico, estamos ao seu lado em cada passo.</p>
-
-                            
-
-                            <!-- <a href="#" class="font-weight-bold text-warning mt-5">A beautiful UI Kit for impactful
-                                websites</a> -->
                         </div>
                     </div>
                 </div>
@@ -232,9 +224,9 @@
         <section class="section section-lg">
             <div class="container">
                 <card gradient="info"
-                      no-body
-                      shadow-size="lg"
-                      class="border-0">
+                    no-body
+                    shadow-size="lg"
+                    class="border-0">
                     <div class="p-5">
                         <div class="row align-items-center">
                             <div class="col-lg-8">
@@ -252,13 +244,13 @@
             </div>
         </section>
 
-        <section class="section pt-0">
+        <section id="contato" class="section pt-0">
             <div class="container">
                 <div class="row text-center justify-content-center">
                     <div class="col-lg-10">
-                        <h2 class="display-3">Contact</h2>
-                        <h4 class="mb-1">Want to work with us?</h4>
-                        <p class="mt-0">Your project is very important to us.</p>
+                        <h2 class="display-3">Contato</h2>
+                        <h4 class="mb-1">Ficou interessado?</h4>
+                        <p class="mt-0">Nos mande uma mensagem.</p>
                     </div>
                 </div>
 
@@ -267,18 +259,18 @@
                         <card gradient="transparent" shadow body-classes="p-lg-5">
                             <base-input class="mt-5"
                                         alternative
-                                        placeholder="Your name"
+                                        placeholder="Nome"
                                         addon-left-icon="ni ni-user-run">
                             </base-input>
                             <base-input alternative
-                                        placeholder="Email address"
+                                        placeholder="Email"
                                         addon-left-icon="ni ni-email-83">
                             </base-input>
                             <base-input class="mb-4">
-                                    <textarea class="form-control form-control-alternative" name="name" rows="4" cols="80" placeholder="Type a message..."></textarea>
+                                    <textarea class="form-control form-control-alternative" name="name" rows="4" cols="80" placeholder="Mensagem..."></textarea>
                             </base-input>
                             <base-button type="default" round block size="lg">
-                                Send Message
+                                Enviar
                             </base-button>
                         </card>
                     </div>

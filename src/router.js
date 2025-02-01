@@ -13,12 +13,21 @@ Vue.use(Router);
 export default new Router({
   linkExactActiveClass: "active",
   routes: [
+    // {
+    //   path: "/",
+    //   name: "components",
+    //   components: {
+    //     header: AppHeader,
+    //     default: Components,
+    //     footer: AppFooter
+    //   }
+    // },
     {
       path: "/",
-      name: "components",
+      name: "landing",
       components: {
         header: AppHeader,
-        default: Components,
+        default: Landing,
         footer: AppFooter
       }
     },
