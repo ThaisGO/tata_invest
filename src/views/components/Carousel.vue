@@ -31,6 +31,32 @@
             </div>
         </div>
     </section>
+    <!-- Bootstrap examples -->
+    <!-- <section class="section">
+            <div class="container">
+                <div class="row row-grid">
+                    <div class="col-lg-12">
+                        <div class="rounded shadow-lg overflow-hidden">
+                            <b-carousel id="carousel1"
+                                        controls
+                                        indicators
+                                        img-width="1024"
+                                        img-height="480">
+
+                            <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image" img-width="1024"
+                            img-height="10"
+                            text="Nulla vitae elit libero, a pharetra augue mollis interdum.">
+                                <p class="text-info">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
+                                a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
+                                </p>
+                            </b-carousel-slide>
+                            </b-carousel>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
 </template>
 <script>
 import { BCarousel } from "bootstrap-vue/esm/components/carousel/carousel";
