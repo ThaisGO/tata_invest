@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div>
         <hero></hero>
         <basic-elements></basic-elements>
@@ -39,4 +39,4 @@ export default {
     DownloadSection
   }
 };
-</script>
+</script> -->

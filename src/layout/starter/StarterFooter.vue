@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <footer class="footer has-cards">
         <div class="container container-lg">
             <div class="row">
@@ -88,4 +88,4 @@ export default {
 };
 </script>
 <style>
-</style>
+</style> -->
