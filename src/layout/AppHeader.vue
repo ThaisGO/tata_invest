@@ -1,9 +1,15 @@
 <template>
-    <header class="header-global">
-        <base-nav class="navbar-main" transparent type="" effect="light" expand>
-            <router-link slot="brand" class="navbar-brand mr-lg-5" to="/">
+    <header class="header-global fixed-top">
+        <base-nav class="navbar-main bg-gradient-default" transparent type="default" effect="light" expand>
+            <!-- <router-link slot="brand" class="navbar-brand mr-lg-5" to="#start" @click.prevent="clearPath('start')">
                 <img src="img/brand/white.png" alt="logo">
-            </router-link>
+            </router-link> -->
+            
+            <div>
+                <a class="navbar-brand mr-lg-5" href="#contato" @click.prevent="clearPath('start')">
+                    <img src="img/brand/white.png" alt="logo">
+                    </a>
+            </div>
 
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
                 <div class="col-6 collapse-brand">
@@ -18,17 +24,17 @@
 
             <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto">
                 <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="#servicos">
+                    <a class="nav-link nav-link-icon" href="#servicos" @click.prevent="clearPath('servicos')">
                         Serviços
                     </a>
                 </li>
                 <li class="nav-item px-4">
-                    <a class="nav-link nav-link-icon" href="#sobre">
+                    <a class="nav-link nav-link-icon" href="#sobre" @click.prevent="clearPath('sobre')">
                         Quem somos
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="#contato">
+                    <a class="nav-link nav-link-icon" href="#contato" @click.prevent="clearPath('contato')">
                         Contato
                     </a>
                 </li>
@@ -82,8 +88,20 @@ export default {
     BaseNav,
     CloseButton,
     BaseDropdown
+  },
+  methods: {
+    clearPath(key) {
+      // 1. Rola até a seção com id "contato"
+      const section = document.getElementById(key);
+      section.scrollIntoView({ behavior: "smooth" });
+
+      // 2. Limpa o hash da URL para não mostrar "#contato"
+    //   this.$router.replace('/'); // Limpa a rota e remove o hash
+      this.$router.replace({ path: '/' });
+    }
   }
 };
 </script>
 <style>
 </style>
+

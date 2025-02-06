@@ -250,13 +250,13 @@
                     <div class="col-lg-10">
                         <h2 class="display-3">Contato</h2>
                         <h4 class="mb-1">Ficou interessado?</h4>
-                        <p class="mt-0">Nos mande uma mensagem.</p>
+                        <p class="mt-0">Mande-nos uma mensagem.</p>
                     </div>
                 </div>
 
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
-                        <card gradient="transparent" shadow body-classes="p-lg-5">
+                        <card gradient="default" body-classes="p-lg-5">
                             <base-input class="mt-5"
                                         alternative
                                         placeholder="Nome"
@@ -269,7 +269,7 @@
                             <base-input class="mb-4">
                                     <textarea class="form-control form-control-alternative" name="name" rows="4" cols="80" placeholder="Mensagem..."></textarea>
                             </base-input>
-                            <base-button type="default" round block size="lg">
+                            <base-button type="info" hover="true" round block size="lg">
                                 Enviar
                             </base-button>
                         </card>
@@ -291,6 +291,6 @@ export default {
     components: {
     BCarousel,
     BCarouselSlide
-  }
+}
 };
 </script>

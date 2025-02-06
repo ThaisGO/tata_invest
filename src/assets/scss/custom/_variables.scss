@@ -45,7 +45,7 @@ $red:     #f5365c !default;
 $orange:  #fb6340 !default;
 $yellow:  #ffd600 !default;
 $green:   #2dce89 !default;
-// $teal:    #11cdef !default;
+$teal:    #11cdef !default;
 $gold:    #B78B55 !default;
 $cyan:    #2bffc6 !default;
 
@@ -60,6 +60,7 @@ $colors: map-merge((
   "yellow":     $yellow,
   "green":      $green,
   "gold":       $gold,
+  "teal":       $teal,
   "cyan":       $cyan,
   "white":      $white,
   "gray":       $gray-600,
@@ -72,7 +73,7 @@ $default:       #31394A !default;
 $primary:       #5e72e4 !default;
 $secondary:     #f4f5f7 !default;
 $success:       $green !default;
-$info:          $gold !default;
+$info:            $gold !default;
 $warning:       $orange !default;
 $danger:        $red !default;
 $light:         $gray-500 !default;
