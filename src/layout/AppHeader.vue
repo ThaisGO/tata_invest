@@ -7,14 +7,14 @@
             
             <div>
                 <a class="navbar-brand mr-lg-5" href="#contato" @click.prevent="clearPath('start')">
-                    <img src="img/brand/white.png" alt="logo">
+                    <!-- <img src="img/brand/white.png" alt="logo"> -->
                     </a>
             </div>
 
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
                 <div class="col-6 collapse-brand">
                     <a href="https://www.google.com">
-                        <img src="img/brand/blue.png">
+                        <!-- <img src="img/brand/blue.png"> -->
                     </a>
                 </div>
                 <div class="col-6 collapse-close">

@@ -1,12 +1,12 @@
-<template>
+<!-- <template>
     <section class="">
         <div class="container">
-            <!-- Navigation -->
+            Navigation
             <h2 class="mb-5">
                 <span>Navbars</span>
             </h2>
         </div>
-        <!-- Navbar default -->
+        Navbar default
         <base-nav v-for="menu in menus"
                   :key="menu.type"
                   :type="menu.type"
@@ -68,4 +68,5 @@ export default {
 };
 </script>
 <style>
-</style>
+</style> 
+-->

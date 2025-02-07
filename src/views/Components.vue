@@ -12,8 +12,9 @@
                           <p class="lead text-white">Com a nossa assessoria, você tem ao seu lado especialistas que entendem o mercado e sabem como transformar seu dinheiro em um verdadeiro aliado.</p>
                           <div class="btn-wrapper">
                               <base-button tag="a"
-                                      href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html"
-                                      class="mb-3 mb-sm-0"
+                                        @click="redirectToWhatsApp"
+                                      
+                                      class="mb-3 mb-sm-0 text-white"
                                       type="info"
                                       icon="fa fa-whatsapp">
                                   Fale com um consultor
@@ -87,8 +88,9 @@
 
                       <div class="btn-wrapper mt-5">
                           <base-button tag="a"
-                                  href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html"
-                                  class="mb-3 mb-sm-0"
+                          @click="redirectToWhatsApp"
+                                  
+                                  class="mb-3 mb-sm-0 text-white"
                                   type="info"
                                   icon="fa fa-whatsapp">
                               Fale com um consultor
@@ -236,7 +238,7 @@
                               <p class="lead text-white mt-3">Pense grande, invista com inteligência e alcance seus objetivos sem complicação. Com a nossa assessoria, você tem um plano personalizado para fazer seu dinheiro crescer com segurança.</p>
                           </div>
                           <div class="col-lg-4 ml-lg-auto">
-                              <base-button tag="a" href="https://www.creative-tim.com/product/vue-argon-design-system" type="default" block size="lg">
+                              <base-button tag="a" @click="redirectToWhatsApp" class="text-white" type="default" block size="lg">
                                   Fale com um consultor
                               </base-button>
                           </div>
@@ -293,6 +295,17 @@ export default {
   components: {
   BCarousel,
   BCarouselSlide
-}
+},
+
+methods: {
+    redirectToWhatsApp() {
+      const phoneNumber = "5561998122458"; // Substitua pelo número desejado
+      const message = "Olá, gostaria de mais informações!"; // Mensagem pré-definida
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+      window.open(whatsappURL, "_blank", "noopener,noreferrer");
+    }
+  }
 };
 </script>

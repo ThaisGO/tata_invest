@@ -1,10 +1,10 @@
-<template>
+<!-- <template>
     <section class="section">
         <div class="container">
-            <!-- Custom controls -->
+            Custom controls
             <div class="row">
                 <div class="col-lg-3 col-md-6">
-                    <!-- Checkboxes -->
+                    Checkboxes
                     <div class="mb-3">
                         <small class="text-uppercase font-weight-bold">Checkboxes</small>
                     </div>
@@ -23,7 +23,7 @@
                     </base-checkbox>
                 </div>
                 <div class="col-lg-3 col-sm-6 mt-4 mt-md-0">
-                    <!-- Radio buttons -->
+                    Radio buttons
                     <div class="mb-3">
                         <small class="text-uppercase font-weight-bold">Radios</small>
                     </div>
@@ -45,7 +45,7 @@
                     </base-radio>
                 </div>
                 <div class="col-lg-3 col-sm-6 mt-4 mt-md-0">
-                    <!-- Toggle buttons -->
+                    Toggle buttons
                     <div class="mb-3">
                         <small class="text-uppercase font-weight-bold">Toggle buttons</small>
                     </div>
@@ -57,13 +57,13 @@
                     <div class="mb-3">
                         <small class="text-uppercase font-weight-bold">Sliders</small>
                     </div>
-                    <!-- Simple slider -->
+                    Simple slider
                     <base-slider v-model="sliders.slider1">
 
                     </base-slider>
-                    <!-- Range slider -->
+                    Range slider
                     <div class="mt-5">
-                        <!-- Range slider container -->
+                        Range slider container
                         <base-slider v-model="sliders.slider2" :range="{min: 0, max: 500}">
 
                         </base-slider>
@@ -72,7 +72,7 @@
             </div>
             <div class="row justify-content-center mt-md">
                 <div class="col-lg-12">
-                    <!-- Menu -->
+                    Menu
                     <h3 class="h4 text-success font-weight-bold mb-4">Menu</h3>
                     <div class="row">
                         <div class="col-lg-6">
@@ -206,4 +206,4 @@ export default {
 };
 </script>
 <style>
-</style>
+</style> -->
