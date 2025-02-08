@@ -40,37 +40,37 @@
               <div class="row text-center justify-content-center">
                   <div class="col-lg-10">
                       <h2 class="display-3 text-white">Serviços</h2>
-                      <p class="lead text-white">According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent tihs year down to low ice.</p>
+                      <p class="lead text-white">Transforme seu futuro financeiro com soluções personalizadas para investir com segurança, planejamento e eficiência.</p>
                   </div>
               </div>
 
               <div class="row row-grid mt-5">
                   <div class="col-lg-4">
-                      <icon name="ni ni-settings" size="lg" gradient="white" shadow round color="primary"></icon>
+                      <icon name="ni ni-single-copy-04" size="lg" gradient="white" shadow round color="primary"></icon>
                       <h5 class="text-white mt-3">Planejamento Financeiro</h5>
                       <p class="text-white mt-3">Alcance suas metas com segurança através de um planejamento personalizado.</p>
                   </div>
                   <div class="col-lg-4">
-                      <icon name="ni ni-ruler-pencil" size="lg" gradient="white" shadow round color="primary"></icon>
+                      <icon name="ni ni-chart-bar-32" size="lg" gradient="white" shadow round color="primary"></icon>
                       <h5 class="text-white mt-3">Gerenciamento de investimentos</h5>
-                      <p class="text-white mt-3">Ensuring that all your assets are put to the best use.</p>
+                      <p class="text-white mt-3">Construa seu patrimônio com um planejamento eficiente e sob medida.</p>
                   </div>
                   <div class="col-lg-4">
-                      <icon name="ni ni-atom" size="lg" gradient="white" shadow round color="primary"></icon>
+                      <icon name="ni ni-building" size="lg" gradient="white" shadow round color="primary"></icon>
                       <h5 class="text-white mt-3">Contratação de Seguros</h5>
-                      <p class="text-white mt-3">Marketing research, analysis, and creating marketing plan.</p>
+                      <p class="text-white mt-3">Proteja o que é mais importante com coberturas sob medida para você.</p>
                   </div>
                   
               </div>
 
               <div class="row row-grid mt-5">
                   <div class="col-lg-4">
-                      <icon name="ni ni-atom" size="lg" gradient="white" shadow round color="primary"></icon>
+                      <icon name="ni ni-money-coins" size="lg" gradient="white" shadow round color="primary"></icon>
                       <h5 class="text-white mt-3">Quitação de dívidas da forma mais barata</h5>
-                      <p class="text-white mt-3">nós ajudamos você a sair das dívidas e se planejar financeiramente.</p>
+                      <p class="text-white mt-3">Nós ajudamos você a sair das dívidas e se planejar financeiramente.</p>
                   </div>
                   <div class="col-lg-4">
-                      <icon name="ni ni-atom" size="lg" gradient="white" shadow round color="primary"></icon>
+                      <icon name="ni ni-world-2" size="lg" gradient="white" shadow round color="primary"></icon>
                       <h5 class="text-white mt-3">Investimentos no Exterior</h5>
                       <p class="text-white mt-3">Diversifique globalmente sua carteira para oportunidades internacionais.</p>
                   </div>
@@ -82,14 +82,12 @@
           <div class="container">
               <div class="row row-grid align-items-center">
                   <div class="col-md-6">
-                      <!-- <img src="img/theme/promo-1.png" class="img-fluid floating"> -->
-                      <h3>Investir bem não é questão de sorte, é de estratégia!</h3>
+                      <h3>Investir bem é uma questão de estratégia</h3>
                       <p>E nós estamos aqui para te ajudar a construir um futuro próspero com decisões financeiras inteligentes.</p>
 
                       <div class="btn-wrapper mt-5">
                           <base-button tag="a"
                           @click="redirectToWhatsApp"
-                                  
                                   class="mb-3 mb-sm-0 text-white"
                                   type="info"
                                   icon="fa fa-whatsapp">
@@ -260,29 +258,37 @@
 
               <div class="row justify-content-center">
                   <div class="col-lg-10">
-                      <card gradient="default" body-classes="p-lg-5">
-                          <base-input class="mt-5"
-                                      alternative
-                                      placeholder="Nome"
-                                      addon-left-icon="ni ni-user-run">
-                          </base-input>
-                          <base-input alternative
-                                      placeholder="Email"
-                                      addon-left-icon="ni ni-email-83">
-                          </base-input>
-                          <base-input class="mb-4">
-                                  <textarea class="form-control form-control-alternative" name="name" rows="4" cols="80" placeholder="Mensagem..."></textarea>
-                          </base-input>
-                          <base-button type="info" hover="true" round block size="lg">
-                              Enviar
-                          </base-button>
-                      </card>
+                    <form @submit.prevent="sendEmail">
+                        <card gradient="default" body-classes="p-lg-5">
+                            <base-input class="mt-5"
+                                v-model="form.name"
+                                        alternative
+                                        placeholder="Nome"
+                                        addon-left-icon="ni ni-circle-08">
+                            </base-input>
+                            <base-input 
+                                v-model="form.email"
+                                    alternative
+                                        placeholder="Email"
+                                        addon-left-icon="ni ni-email-83">
+                            </base-input>
+                            <base-input class="mb-4">
+                                    <textarea 
+                                    class="form-control form-control-alternative" 
+                                    v-model="form.message"
+                                    name="name" rows="4" cols="80" placeholder="Mensagem..."></textarea>
+                            </base-input>
+                            <base-button type="info" nativeType="submit" hover="true" round block size="lg">
+                                Enviar
+                            </base-button>
+                            <p v-if="statusMessage">{{ statusMessage }}</p>
+                        </card>
+                    </form>
                   </div>
               </div>
           </div>
       </section>
 
-      
   </div>
 </template>
 
@@ -291,21 +297,43 @@ import { BCarousel } from "bootstrap-vue/esm/components/carousel/carousel";
 import { BCarouselSlide } from "bootstrap-vue/esm/components/carousel/carousel-slide";
 
 export default {
-  name: "home",
-  components: {
-  BCarousel,
-  BCarouselSlide
-},
+    name: "home",
+    components: {
+    BCarousel,
+    BCarouselSlide
+    },
+    data() {
+        return {
+        form: { name: "", email: "", message: "" },
+        statusMessage: "",
+        };
+    },
 
-methods: {
-    redirectToWhatsApp() {
-      const phoneNumber = "5561998122458"; // Substitua pelo número desejado
-      const message = "Olá, gostaria de mais informações!"; // Mensagem pré-definida
-      const encodedMessage = encodeURIComponent(message);
-      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    methods: {
+        redirectToWhatsApp() {
+            const phoneNumber = "5561998122458";
+            const message = "Olá, gostaria de mais informações!";
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
-      window.open(whatsappURL, "_blank", "noopener,noreferrer");
+            window.open(whatsappURL, "_blank", "noopener,noreferrer");
+        },
+
+        async sendEmail() {
+            try {
+                const response = await fetch("https://thaisgodev.com/sendEmail.php", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded"},
+                    body: new URLSearchParams(this.form).toString(),
+                });
+
+                const data = await response.json();
+                this.statusMessage = data.message;
+            } catch (error) {
+                console.error("Erro ao enviar email:", error);
+                this.statusMessage = "Erro ao enviar o email.";
+            }
+        },
     }
-  }
 };
 </script>
